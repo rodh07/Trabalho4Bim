@@ -1,5 +1,8 @@
 package br.univel.trab;
 
+import br.univel.enums.Estado;
+import br.univel.enums.Genero;
+
 public class Cliente {
 
 	private int id;
