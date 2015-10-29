@@ -21,8 +21,11 @@ public class TelaP extends JFrame {
 
 	private JPanel contentPane;
 	private JTabbedPane tabbedPane;
-	private BlockPanel Bloqueio;
+	private TelaBloqueio Bloqueio;
 
+	
+
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -39,7 +42,11 @@ public class TelaP extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
 	public TelaP() {
+		
+		bloqueioParaLogin();
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		
@@ -92,14 +99,30 @@ public class TelaP extends JFrame {
 		contentPane.setLayout(gbl_contentPane);
 	}
 	
-	protected void block(){
+	private void bloqueioParaLogin() {
+		Runnable action = () -> {
+			Bloqueio.setVisible(false);
+			Bloqueio = new TelaBloqueio();
+		};
+
+		TelaLogin telaLogin = new TelaLogin(action);
+
+		TelaBloqueio bloqque= new TelaBloqueio();
+
 		setGlassPane(Bloqueio);
-		
+
+		 Bloqueio.setVisible(true);
 	}
 	
 	private void abrirTela() {
-		CadastroClientes CadCliente = new CadastroClientes();
+		CadastroClientes cadastroClientes = new CadastroClientes();
+		ActionListener action = new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				tabbedPane.remove(cadastroClientes);
+			}
+		};
 
-		
+		tabbedPane.addTab("Tela ", cadastroClientes);
 	}
 }
