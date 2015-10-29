@@ -45,38 +45,41 @@ public class TelaP extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Cadastros");
-		menuBar.add(mnNewMenu);
+		JMenu MenuCadastro = new JMenu("Cadastros");
+		menuBar.add(MenuCadastro);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Cliente");
-		mntmNewMenuItem.addActionListener(new ActionListener() {
+		JMenuItem CadCliente = new JMenuItem("Cliente");
+		CadCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				abrirTela();
 				
 			}
 		});
-		mnNewMenu.add(mntmNewMenuItem);
+		MenuCadastro.add(CadCliente);
 		
-		JMenuItem mntmUsurio = new JMenuItem("Usu\u00E1rio");
-		mnNewMenu.add(mntmUsurio);
+		JMenuItem CadUsuario = new JMenuItem("Usu\u00E1rio");
+		MenuCadastro.add(CadUsuario);
 		
-		JMenuItem mntmProduto = new JMenuItem("Produto");
-		mnNewMenu.add(mntmProduto);
+		JMenuItem CadProduto = new JMenuItem("Produto");
+		MenuCadastro.add(CadProduto);
 		
-		JMenu mnNewMenu_1 = new JMenu("Pesquisar");
-		menuBar.add(mnNewMenu_1);
+		JMenu MenuPesquisar = new JMenu("Pesquisar");
+		menuBar.add(MenuPesquisar);
 		
-		JMenuItem mntmCliente = new JMenuItem("Cliente");
-		mnNewMenu_1.add(mntmCliente);
+		JMenuItem PesqCliente = new JMenuItem("Cliente");
+		MenuPesquisar.add(PesqCliente);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Usu\u00E1rio");
-		mnNewMenu_1.add(mntmNewMenuItem_1);
+		JMenuItem PesqUser = new JMenuItem("Usu\u00E1rio");
+		MenuPesquisar.add(PesqUser);
 		
-		JMenuItem mntmProduto_1 = new JMenuItem("Produto");
-		mnNewMenu_1.add(mntmProduto_1);
+		JMenuItem PesqProd = new JMenuItem("Produto");
+		MenuPesquisar.add(PesqProd);
 		
-		JMenu mnNewMenu_2 = new JMenu("Sair");
+		JMenu mnNewMenu_2 = new JMenu("Ajuda");
 		menuBar.add(mnNewMenu_2);
+		
+		JMenuItem ATSmenu = new JMenuItem("About this system");
+		mnNewMenu_2.add(ATSmenu);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
