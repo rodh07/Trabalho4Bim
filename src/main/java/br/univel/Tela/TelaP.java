@@ -21,6 +21,7 @@ public class TelaP extends JFrame {
 
 	private JPanel contentPane;
 	private JTabbedPane tabbedPane;
+	private BlockPanel Bloqueio;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -91,8 +92,14 @@ public class TelaP extends JFrame {
 		contentPane.setLayout(gbl_contentPane);
 	}
 	
+	protected void block(){
+		setGlassPane(Bloqueio);
+		
+	}
+	
 	private void abrirTela() {
 		CadastroClientes CadCliente = new CadastroClientes();
 
-}
+		
+	}
 }
