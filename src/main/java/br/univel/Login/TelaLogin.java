@@ -1,4 +1,4 @@
-package br.univel.Tela;
+package br.univel.Login;
 
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;

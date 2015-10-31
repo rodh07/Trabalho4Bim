@@ -14,6 +14,9 @@ import javax.swing.JMenuItem;
 import javax.swing.JMenu;
 import javax.swing.JTabbedPane;
 
+import br.univel.Login.TelaBloqueio;
+import br.univel.Login.TelaLogin;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 

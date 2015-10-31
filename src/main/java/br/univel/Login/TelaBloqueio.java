@@ -1,4 +1,4 @@
-package br.univel.Tela;
+package br.univel.Login;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
