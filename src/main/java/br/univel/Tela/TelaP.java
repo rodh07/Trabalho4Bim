@@ -24,7 +24,7 @@ public class TelaP extends JFrame {
 	private TelaBloqueio Bloqueio;
 
 	
-
+ 
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
