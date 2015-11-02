@@ -13,7 +13,7 @@ public class RelatorioJasperClientes {
 
 	private String arq = "D:\\MyReports\\RelatorioClientes.jasper";
 
-	public 	RelatorioJasper() {
+	public 	RelatorioJasperClientes() {
 
 		JasperPrint jasperPrint = null;
 		try {
@@ -40,6 +40,6 @@ public class RelatorioJasperClientes {
 	}
 
 	public static void main(String[] args) {
-		new RelatorioJasper();
+		new RelatorioJasperClientes();
 	}
 }

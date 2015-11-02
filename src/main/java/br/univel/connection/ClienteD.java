@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import br.univel.enums.Estado;
 import br.univel.cadastros.Cliente;
 
-public class ClienteDao {
+public class ClienteD {
 
 	Connection con;
 

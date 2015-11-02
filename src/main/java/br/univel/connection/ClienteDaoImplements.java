@@ -7,7 +7,7 @@ import java.util.List;
 
 import br.univel.cadastros.Cliente;
 
-public class ClienteDaoImplements implements ClienteDao{
+public class ClienteDaoImplements{
 	private static Connection con;
 	
 	private Connection getConnection() {
@@ -21,12 +21,6 @@ public class ClienteDaoImplements implements ClienteDao{
 	}
 	
 	public void inserir(Cliente c) {
-		String sql = "INSERT INTO....";
-		try (PreparedStatement ps = getConnection().prepareStatement(sql)) {
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 	
 	}
 
