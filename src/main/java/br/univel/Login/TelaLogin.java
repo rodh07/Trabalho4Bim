@@ -80,12 +80,12 @@ public class TelaLogin extends JPanel {
 
 	}
 	
-	public TelaLogin(Runnable action) {
+	public TelaLogin(Runnable execut) {
 		this();
 		btnLogar.addActionListener(e -> {
 			if (txtLogin.getText().trim().equals("rodrigo")
 					&& new String(password.getPassword()).equals("rodrigo")) {
-				action.run();
+				execut.run();
 			} else {
 				JOptionPane.showMessageDialog(TelaLogin.this,
 						"Usuário ou senha inválidos!");

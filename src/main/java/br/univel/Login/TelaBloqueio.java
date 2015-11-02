@@ -24,14 +24,7 @@ public class TelaBloqueio extends JPanel {
 	private Image image;
 	
 	public TelaBloqueio() {
-		
-		try {
-			image = ImageIO.read(TelaBloqueio.class
-					.getResourceAsStream(""));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
+	
 		
 		setOpaque(false);
 		setBackground(Color.GRAY);

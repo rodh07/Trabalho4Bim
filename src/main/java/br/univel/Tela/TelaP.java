@@ -22,12 +22,11 @@ import java.awt.event.ActionEvent;
 
 public class TelaP extends JFrame {
 
+	
 	private JPanel contentPane;
 	private JTabbedPane tabbedPane;
 	private TelaBloqueio Bloqueio;
 
-	
- 
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -101,7 +100,7 @@ public class TelaP extends JFrame {
 		gbl_contentPane.rowWeights = new double[]{Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 	}
-	
+	//Ativar bloqueio do Login.
 	private void bloqueioParaLogin() {
 		Runnable action = () -> {
 			Bloqueio.setVisible(false);
@@ -115,8 +114,9 @@ public class TelaP extends JFrame {
 		setGlassPane(Bloqueio);
 
 		 Bloqueio.setVisible(true);
-	}
 	
+	
+}
 	private void abrirTela() {
 		CadastroClientes cadastroClientes = new CadastroClientes();
 		ActionListener action = new ActionListener() {
