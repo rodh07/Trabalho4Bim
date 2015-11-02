@@ -1,4 +1,4 @@
-package br.univel.trab;
+package br.univel.cadastros;
 
 import br.univel.enums.Estado;
 import br.univel.enums.Genero;

@@ -1,4 +1,4 @@
-package br.univel.trab;
+package br.univel.cadastros;
 
 public class Produto {
 

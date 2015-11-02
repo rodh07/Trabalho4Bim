@@ -4,7 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
-import br.univel.trab.Cliente;
+
+import br.univel.cadastros.Cliente;
 
 public class ClienteDaoImplements implements ClienteDao{
 	private static Connection con;
