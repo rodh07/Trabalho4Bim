@@ -21,7 +21,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TelaP extends JFrame {
-
+ 
 	
 	private JPanel contentPane;
 	private JTabbedPane tabbedPane;
