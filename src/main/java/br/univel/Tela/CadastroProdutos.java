@@ -11,6 +11,9 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
 
 public class CadastroProdutos extends JFrame {
 
@@ -47,45 +50,94 @@ public class CadastroProdutos extends JFrame {
 		
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.CENTER);
-		panel.setLayout(null);
+		GridBagLayout gbl_panel = new GridBagLayout();
+		gbl_panel.columnWidths = new int[]{116, 32, 119, 0, 89, 0, 0};
+		gbl_panel.rowHeights = new int[]{30, 20, 0, 20, 0, 20, 27, 23, 0, 0};
+		gbl_panel.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		panel.setLayout(gbl_panel);
 		
 		JLabel lblNewLabel = new JLabel("Cadastro de produtos");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel.setBounds(148, 5, 143, 30);
-		panel.add(lblNewLabel);
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.fill = GridBagConstraints.VERTICAL;
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
+		gbc_lblNewLabel.gridwidth = 6;
+		gbc_lblNewLabel.gridx = 0;
+		gbc_lblNewLabel.gridy = 0;
+		panel.add(lblNewLabel, gbc_lblNewLabel);
 		
 		JLabel lblId = new JLabel("ID:");
-		lblId.setBounds(70, 49, 46, 14);
-		panel.add(lblId);
-		
-		JLabel lblNome = new JLabel("C\u00F3digo de barras:");
-		lblNome.setBounds(0, 88, 94, 14);
-		panel.add(lblNome);
+		GridBagConstraints gbc_lblId = new GridBagConstraints();
+		gbc_lblId.anchor = GridBagConstraints.EAST;
+		gbc_lblId.insets = new Insets(0, 0, 5, 5);
+		gbc_lblId.gridx = 0;
+		gbc_lblId.gridy = 2;
+		panel.add(lblId, gbc_lblId);
 		
 		textField = new JTextField();
-		textField.setBounds(93, 46, 282, 20);
-		panel.add(textField);
+		GridBagConstraints gbc_textField = new GridBagConstraints();
+		gbc_textField.anchor = GridBagConstraints.NORTH;
+		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField.insets = new Insets(0, 0, 5, 0);
+		gbc_textField.gridwidth = 5;
+		gbc_textField.gridx = 1;
+		gbc_textField.gridy = 2;
+		panel.add(textField, gbc_textField);
 		textField.setColumns(10);
 		
+		JLabel lblNome = new JLabel("C\u00F3digo de barras:");
+		GridBagConstraints gbc_lblNome = new GridBagConstraints();
+		gbc_lblNome.anchor = GridBagConstraints.EAST;
+		gbc_lblNome.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNome.gridx = 0;
+		gbc_lblNome.gridy = 4;
+		panel.add(lblNome, gbc_lblNome);
+		
 		textField_1 = new JTextField();
-		textField_1.setBounds(92, 85, 283, 20);
-		panel.add(textField_1);
+		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
+		gbc_textField_1.anchor = GridBagConstraints.NORTH;
+		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
+		gbc_textField_1.insets = new Insets(0, 0, 5, 0);
+		gbc_textField_1.gridwidth = 5;
+		gbc_textField_1.gridx = 1;
+		gbc_textField_1.gridy = 4;
+		panel.add(textField_1, gbc_textField_1);
 		textField_1.setColumns(10);
 		
-		JButton btnSalvar = new JButton("Adicionar");
-		btnSalvar.setBounds(286, 197, 89, 23);
-		panel.add(btnSalvar);
+		JLabel lblCategoria = new JLabel("Categoria:");
+		GridBagConstraints gbc_lblCategoria = new GridBagConstraints();
+		gbc_lblCategoria.anchor = GridBagConstraints.EAST;
+		gbc_lblCategoria.insets = new Insets(0, 0, 5, 5);
+		gbc_lblCategoria.gridx = 0;
+		gbc_lblCategoria.gridy = 6;
+		panel.add(lblCategoria, gbc_lblCategoria);
 		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(93, 127, 282, 20);
-		panel.add(comboBox);
+		GridBagConstraints gbc_comboBox = new GridBagConstraints();
+		gbc_comboBox.anchor = GridBagConstraints.NORTH;
+		gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
+		gbc_comboBox.insets = new Insets(0, 0, 5, 0);
+		gbc_comboBox.gridwidth = 5;
+		gbc_comboBox.gridx = 1;
+		gbc_comboBox.gridy = 6;
+		panel.add(comboBox, gbc_comboBox);
 		
-		JLabel lblCategoria = new JLabel("Categoria:");
-		lblCategoria.setBounds(34, 130, 82, 14);
-		panel.add(lblCategoria);
+		JButton btnExcluir = new JButton("Excluir");
+		GridBagConstraints gbc_btnExcluir = new GridBagConstraints();
+		gbc_btnExcluir.anchor = GridBagConstraints.NORTHEAST;
+		gbc_btnExcluir.insets = new Insets(0, 0, 0, 5);
+		gbc_btnExcluir.gridx = 2;
+		gbc_btnExcluir.gridy = 8;
+		panel.add(btnExcluir, gbc_btnExcluir);
 		
-		JButton btnEcvluir = new JButton("Excluir");
-		btnEcvluir.setBounds(178, 197, 89, 23);
-		panel.add(btnEcvluir);
+		JButton btnSalvar = new JButton("Adicionar");
+		GridBagConstraints gbc_btnSalvar = new GridBagConstraints();
+		gbc_btnSalvar.insets = new Insets(0, 0, 0, 5);
+		gbc_btnSalvar.anchor = GridBagConstraints.NORTH;
+		gbc_btnSalvar.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnSalvar.gridx = 4;
+		gbc_btnSalvar.gridy = 8;
+		panel.add(btnSalvar, gbc_btnSalvar);
 	}
 }

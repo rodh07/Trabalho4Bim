@@ -61,17 +61,44 @@ public class TelaP extends JFrame {
 		JMenuItem CadCliente = new JMenuItem("Cliente");
 		CadCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				abrirTela();
+				CadastroCliente cadCliente = new CadastroCliente();
+				cadCliente.setVisible(true);
+				cadCliente.setLocation(null);
 				
 			}
 		});
 		MenuCadastro.add(CadCliente);
 		
 		JMenuItem CadUsuario = new JMenuItem("Usu\u00E1rio");
+		CadUsuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				CadastroUsuario cadUsuario = new CadastroUsuario();
+				cadUsuario.setVisible(true);
+				cadUsuario.setLocation(null);
+			}
+		});
 		MenuCadastro.add(CadUsuario);
 		
 		JMenuItem CadProduto = new JMenuItem("Produto");
+		CadProduto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				CadastroProdutos cadProduto = new CadastroProdutos();
+				cadProduto.setVisible(true);
+				cadProduto.setLocation(null);
+			}
+		});
 		MenuCadastro.add(CadProduto);
+		
+		JMenuItem mntmVendas = new JMenuItem("Vendas");
+		mntmVendas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CadastroVendas cadVenda = new CadastroVendas();
+				cadVenda.setVisible(true);
+				cadVenda.setLocation(null);
+			}
+		});
+		MenuCadastro.add(mntmVendas);
 		
 		JMenu MenuPesquisar = new JMenu("Pesquisar");
 		menuBar.add(MenuPesquisar);
@@ -117,15 +144,4 @@ public class TelaP extends JFrame {
 	
 	
 }
-	private void abrirTela() {
-		CadastroClientes cadastroClientes = new CadastroClientes();
-		ActionListener action = new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				tabbedPane.remove(cadastroClientes);
-			}
-		};
-
-		tabbedPane.addTab("Tela ", cadastroClientes);
-	}
 }
