@@ -47,7 +47,7 @@ public class TelaP extends JFrame {
 	
 	public TelaP() {
 		
-		bloqueioParaLogin();
+		//bloqueioParaLogin();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -63,7 +63,7 @@ public class TelaP extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				CadastroCliente cadCliente = new CadastroCliente();
 				cadCliente.setVisible(true);
-				cadCliente.setLocation(null);
+				cadCliente.setLocationRelativeTo(null);
 				
 			}
 		});
@@ -74,7 +74,7 @@ public class TelaP extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				CadastroUsuario cadUsuario = new CadastroUsuario();
 				cadUsuario.setVisible(true);
-				cadUsuario.setLocation(null);
+				cadUsuario.setLocationRelativeTo(null);
 			}
 		});
 		MenuCadastro.add(CadUsuario);
@@ -85,7 +85,7 @@ public class TelaP extends JFrame {
 				
 				CadastroProdutos cadProduto = new CadastroProdutos();
 				cadProduto.setVisible(true);
-				cadProduto.setLocation(null);
+				cadProduto.setLocationRelativeTo(null);
 			}
 		});
 		MenuCadastro.add(CadProduto);
@@ -95,7 +95,7 @@ public class TelaP extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				CadastroVendas cadVenda = new CadastroVendas();
 				cadVenda.setVisible(true);
-				cadVenda.setLocation(null);
+				cadVenda.setLocationRelativeTo(null);
 			}
 		});
 		MenuCadastro.add(mntmVendas);
@@ -127,21 +127,21 @@ public class TelaP extends JFrame {
 		gbl_contentPane.rowWeights = new double[]{Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 	}
-	//Ativar bloqueio do Login.
-	private void bloqueioParaLogin() {
-		Runnable action = () -> {
-			Bloqueio.setVisible(false);
-			Bloqueio = new TelaBloqueio();
-		};
-
-		TelaLogin telaLogin = new TelaLogin(action);
-
-		TelaBloqueio bloqque= new TelaBloqueio();
-
-		setGlassPane(Bloqueio);
-
-		 Bloqueio.setVisible(true);
-	
-	
-}
+//	//Ativar bloqueio do Login.
+//	private void bloqueioParaLogin() {
+//		Runnable action = () -> {
+//			Bloqueio.setVisible(false);
+//			Bloqueio = new TelaBloqueio();
+//		};
+//
+//		TelaLogin telaLogin = new TelaLogin(action);
+//
+//		TelaBloqueio bloqque= new TelaBloqueio();
+//
+//		setGlassPane(Bloqueio);
+//
+//		 Bloqueio.setVisible(true);
+//	
+//	
+//}
 }

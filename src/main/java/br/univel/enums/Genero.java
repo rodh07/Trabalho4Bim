@@ -2,10 +2,21 @@ package br.univel.enums;
 
 public enum Genero {
 
-	PRIM,
-	SEG,
-	TER,
-	QUAR,
-	QUIN;
+	Comedia,
+	Terror,
+	Ficcao,
+	Luta;
+	
+	Genero genero;
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+	
+	
 	
 }

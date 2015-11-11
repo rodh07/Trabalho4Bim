@@ -48,7 +48,7 @@ public class CadastroCliente extends JFrame {
 	 */
 	public CadastroCliente() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 462, 338);
+		setBounds(100, 100, 462, 339);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -66,11 +66,10 @@ public class CadastroCliente extends JFrame {
 		JLabel label = new JLabel("Cadastro de Clientes");
 		label.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GridBagConstraints gbc_label = new GridBagConstraints();
-		gbc_label.anchor = GridBagConstraints.EAST;
 		gbc_label.fill = GridBagConstraints.VERTICAL;
 		gbc_label.insets = new Insets(0, 0, 5, 5);
-		gbc_label.gridwidth = 6;
-		gbc_label.gridx = 2;
+		gbc_label.gridwidth = 9;
+		gbc_label.gridx = 0;
 		gbc_label.gridy = 0;
 		panel.add(label, gbc_label);
 		
