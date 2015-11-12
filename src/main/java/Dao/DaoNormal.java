@@ -1,4 +1,4 @@
-package br.univel.Dao;
+package Dao;
 
 public class DaoNormal {
 
